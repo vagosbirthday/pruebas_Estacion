@@ -14,7 +14,10 @@ export default function Home() {
             Sala de Lecturas «La Estación»
           </h1>
           <p className="mt-2 text-lg">
-            Un espacio para compartir historias, ciencia y cultura
+            Somos una sala de lectura, localizada en la colonia Patios de la Estación en Cuernavaca 
+            Es un espacio de encuentro entre infancias con libros de forma lúdica 
+            Nuestros pilares: la inclusión y hospitalidad
+            Nos une el respeto a nuestras diferencias
           </p>
         </div>
       </section>
