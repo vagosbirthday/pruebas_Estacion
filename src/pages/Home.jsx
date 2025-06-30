@@ -10,29 +10,37 @@ export default function Home() {
       <section className="relative h-64 bg-primaria-700 text-white flex items-center justify-center">
         <div className="absolute inset-0 bg-[url('/images/hero.jpg')] bg-cover bg-center opacity-30" />
         <div className="relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold">La Sala de Lectura «La Estación»</h1>
-          <p className="mt-2 text-lg">Un espacio para compartir historias, ciencia y cultura</p>
+          <h1 className="text-4xl md:text-5xl font-bold">
+            La Sala de Lectura «La Estación»
+          </h1>
+          <p className="mt-2 text-lg">
+            Un espacio para compartir historias, ciencia y cultura
+          </p>
         </div>
       </section>
 
-      {/* Categorías */}
-      <section>
-        <CategoryList />
-      </section>
+      {/* ——> Aquí volvemos a insertar la lista de categorías */}
+      <CategoryList />
 
       {/* Mensajes */}
       <Section title="Mensajes">
-        <p className="text-gray-600">Próximamente publicaremos noticias importantes, actividades y novedades.</p>
+        <p className="text-gray-600">
+          Próximamente publicaremos noticias importantes, actividades y novedades.
+        </p>
       </Section>
 
       {/* Calendario */}
       <Section title="Calendario de Eventos">
-        <p className="text-gray-600">Consulta aquí las próximas actividades, lecturas colectivas y talleres.</p>
+        <p className="text-gray-600">
+          Consulta aquí las próximas actividades, lecturas colectivas y talleres.
+        </p>
       </Section>
 
       {/* Ubicación */}
       <Section title="Dónde nos ubicamos">
-        <p className="text-gray-600">Nos encontramos en Cuernavaca, Morelos. Muy pronto añadiremos un mapa interactivo.</p>
+        <p className="text-gray-600">
+          Nos encontramos en Cuernavaca, Morelos. Muy pronto añadiremos un mapa interactivo.
+        </p>
       </Section>
 
       {/* Contacto */}
@@ -53,10 +61,14 @@ function Section({ title, children }) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      className="container mx-auto px-4 py-6"
+      className="w-full bg-white"
     >
-      <h2 className="text-2xl font-semibold mb-4">{title}</h2>
-      <div className="bg-white p-6 rounded-xl shadow">{children}</div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <h2 className="text-2xl font-semibold mb-4">{title}</h2>
+        <div className="bg-white p-6 rounded-xl shadow">
+          {children}
+        </div>
+      </div>
     </motion.section>
   )
 }

@@ -1,4 +1,5 @@
 // src/pages/CategoryPage.jsx
+
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import categories from '../data/categoriesData'
@@ -17,29 +18,38 @@ export default function CategoryPage() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-10">
-      <header className="mb-8 text-center">
-        <h1 className="text-4xl font-bold mb-2">{category.title}</h1>
-        <p className="text-gray-600">{category.description}</p>
-      </header>
+    <section className="w-full bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <header className="mb-8 text-center">
+          <h1 className="
+            text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+            font-bold mb-2
+          ">
+            {category.title}
+          </h1>
+          <p className="text-gray-600">{category.description}</p>
+        </header>
 
-      <section>
-        <h2 className="text-2xl font-semibold mb-4">Libros disponibles</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[1, 2, 3].map((_, idx) => (
-            <div
-              key={idx}
-              className="bg-white border rounded-xl shadow p-4 hover:shadow-md transition"
-            >
-              <div className="h-40 bg-gray-200 mb-4 flex items-center justify-center">
-                <span className="text-gray-400">Imagen</span>
+        <section>
+          <h2 className="text-xl sm:text-2xl font-semibold mb-4">
+            Libros disponibles
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {[1, 2, 3].map((_, idx) => (
+              <div
+                key={idx}
+                className="bg-white border rounded-xl shadow p-4 hover:shadow-md transition"
+              >
+                <div className="h-40 bg-gray-200 mb-4 flex items-center justify-center">
+                  <span className="text-gray-400">Imagen</span>
+                </div>
+                <h3 className="font-bold mb-1">Título de Ejemplo {idx + 1}</h3>
+                <p className="text-sm text-gray-500">Autor Desconocido</p>
               </div>
-              <h3 className="font-bold mb-1">Título de Ejemplo {idx + 1}</h3>
-              <p className="text-sm text-gray-500">Autor Desconocido</p>
-            </div>
-          ))}
-        </div>
-      </section>
-    </div>
+            ))}
+          </div>
+        </section>
+      </div>
+    </section>
   )
 }
