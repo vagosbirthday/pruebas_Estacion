@@ -1,5 +1,3 @@
-// src/components/CategoryList.jsx
-
 import React from 'react'
 import categories from '../data/categoriesData'
 import CategoryCard from './CategoryCard'
@@ -12,9 +10,9 @@ export default function CategoryList() {
   }
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-12 bg-fondo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-8">
+        <h2 className="text-3xl font-bold text-center mb-8 text-morado">
           Explora por Categorías
         </h2>
         <motion.div

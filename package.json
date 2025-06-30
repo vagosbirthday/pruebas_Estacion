@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-    "homepage": "https://github.com/vagosbirthday/pruebas_Estacion",
+  "homepage": "https://github.com/vagosbirthday/pruebas_Estacion",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,7 +13,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "framer-motion": "^12.19.2",
+    "framer-motion": "^12.20.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.3"
@@ -44,5 +44,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/vagosbirthday/pruebas_Estacion/issues"
-  } 
+  }
 }

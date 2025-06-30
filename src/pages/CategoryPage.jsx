@@ -1,8 +1,7 @@
-// src/pages/CategoryPage.jsx
-
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import categories from '../data/categoriesData'
+import Section from '../components/Section'
 
 export default function CategoryPage() {
   const { id } = useParams()
@@ -10,46 +9,57 @@ export default function CategoryPage() {
 
   if (!category) {
     return (
-      <div className="p-8 text-center">
-        <h2 className="text-2xl font-bold">Categoría no encontrada</h2>
-        <p className="text-gray-600">Verifica la URL o regresa al inicio.</p>
-      </div>
+      <Section title="Categoría no encontrada" accent="rojo">
+        <p className="text-morado">
+          Verifica la URL o regresa al inicio.
+        </p>
+        <Link to="/" className="mt-4 inline-block text-naranja font-semibold">
+          Volver al inicio
+        </Link>
+      </Section>
     )
   }
 
   return (
-    <section className="w-full bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <header className="mb-8 text-center">
-          <h1 className="
-            text-2xl sm:text-3xl md:text-4xl lg:text-5xl
-            font-bold mb-2
-          ">
-            {category.title}
-          </h1>
-          <p className="text-gray-600">{category.description}</p>
-        </header>
+    <>
+      <Section title={category.title} accent="verde">
+        <p className="text-morado">{category.description}</p>
+      </Section>
 
-        <section>
-          <h2 className="text-xl sm:text-2xl font-semibold mb-4">
-            Libros disponibles
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {[1, 2, 3].map((_, idx) => (
-              <div
-                key={idx}
-                className="bg-white border rounded-xl shadow p-4 hover:shadow-md transition"
-              >
-                <div className="h-40 bg-gray-200 mb-4 flex items-center justify-center">
-                  <span className="text-gray-400">Imagen</span>
-                </div>
-                <h3 className="font-bold mb-1">Título de Ejemplo {idx + 1}</h3>
-                <p className="text-sm text-gray-500">Autor Desconocido</p>
+      <Section title="Libros disponibles" accent="naranja">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {[1, 2, 3].map((_, idx) => (
+            <div
+              key={idx}
+              className="
+                bg-white border-2 border-gris rounded-2xl
+                p-4 overflow-hidden shadow-playful
+                hover:border-rojo hover:shadow-lg transition
+              "
+            >
+              <div className="h-40 bg-rojoClaro mb-4 flex items-center justify-center rounded-lg">
+                <span className="text-rojoSuave">Imagen</span>
               </div>
-            ))}
-          </div>
-        </section>
-      </div>
-    </section>
+              <h3 className="text-lg font-bold text-morado mb-1">
+                Título de Ejemplo {idx + 1}
+              </h3>
+              <p className="text-sm text-morado mb-3">
+                Autor Desconocido
+              </p>
+              <Link
+                to={`/categoria/${category.id}/libro/${idx + 1}`}
+                className="
+                  block text-center bg-rojo text-white
+                  py-2 rounded-xl font-medium
+                  hover:bg-verde transition
+                "
+              >
+                Ver detalle
+              </Link>
+            </div>
+          ))}
+        </div>
+      </Section>
+    </>
   )
 }

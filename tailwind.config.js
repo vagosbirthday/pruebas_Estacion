@@ -5,29 +5,26 @@ export default {
     "./src/**/*.{js,jsx}"
   ],
   theme: {
-    screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
-      '2xl': '1536px',
-      tablet: '640px',
-      laptop: '1024px',
-      desktop: '1440px',
-    },
-
     extend: {
       colors: {
-        primaria: {
-          50:  "#eef2ff",
-          100: "#e0e7ff",
-          500: "#6366f1",
-          700: "#4338ca",
-        },
-        secundaria: {
-          100: "#fef3c7",
-          500: "#f59e0b",
-        }
+        rojo:       '#BE1D2D',
+        rojoClaro:  '#F2D8DA',
+        rojoSuave:  '#F8B0B4',
+        verde:      '#3CB14B',
+        morado:     '#2A2064',
+        naranja:    '#F8901A',
+        gris:       '#BDB29C',
+        fondo:      '#FEFBF8'
+      },
+      fontFamily: {
+        sans: ['"Comic Neue"', 'system-ui', 'sans-serif'],
+      },
+      borderRadius: {
+        xl: '1rem',
+        '2xl': '1.5rem',
+      },
+      boxShadow: {
+        playful: '0 4px 12px rgba(190,29,45,0.15)',
       }
     }
   },
