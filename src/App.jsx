@@ -1,20 +1,14 @@
 // src/App.jsx
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import CategoryPage from './pages/CategoryPage'
+import Navbar from './components/Navbar'  // ← asegúrate de que este archivo exista
 
 export default function App() {
   return (
     <div className="relative flex flex-col min-h-screen font-sans bg-fondo">
-      {/* Menú fijo izquierdo: oculto en móvil, aparece en md+ */}
-      <nav className="hidden md:flex fixed top-0 left-0 h-full items-start p-4 pl-6">
-        <Link
-          to="/"
-          className="text-rojoSuave hover:text-rojo font-bold text-2xl"
-        >
-          ☰ La Estación
-        </Link>
-      </nav>
+      {/* Nav: hamburguesa en móvil, sidebar en md+ */}
+      <Navbar />
 
       {/* Contenedor principal: padding móvil y desplazamiento en md+ */}
       <div
@@ -22,7 +16,7 @@ export default function App() {
           flex-grow
           pt-4 pb-4
           px-4                /* móvil: padding horizontal */
-          md:pl-20 md:pr-20   /* md+: desplazamiento para menú y franjas */
+          md:pl-64 md:pr-64   /* md+: deja espacio para el sidebar de 16rem (w-64) + franjas */
           md:px-0
         "
       >

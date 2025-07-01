@@ -35,21 +35,21 @@ export default function Home() {
       <CategoryList />
 
       {/* Mensajes */}
-      <Section title="Mensajes" accent="naranja">
+      <Section id="mensajes" title="Mensajes" accent="naranja">
         <p className="text-morado">
           Próximamente publicaremos noticias importantes, actividades y novedades.
         </p>
       </Section>
 
       {/* Calendario de Eventos */}
-      <Section title="Calendario de Eventos" accent="verde">
+      <Section id="calendario" title="Calendario de Eventos" accent="verde">
         <p className="text-morado">
           Consulta aquí las próximas actividades, lecturas colectivas y talleres.
         </p>
       </Section>
 
       {/* Dónde nos ubicamos */}
-      <Section title="Dónde nos ubicamos" accent="rojo">
+      <Section id="ubicacion" title="Dónde nos ubicamos" accent="rojo">
         <div
           className="w-full rounded-xl overflow-hidden shadow-playful mb-4"
           style={{ aspectRatio: '16/9' }}
@@ -77,7 +77,7 @@ export default function Home() {
       </Section>
 
       {/* Contacto */}
-      <Section title="Contacto" accent="morado">
+      <Section id="contacto" title="Contacto" accent="morado">
         <ul className="text-morado">
           <li>📞 Teléfono: 777 123 4567</li>
           <li>✉️ Correo: contacto@laestacion.mx</li>
