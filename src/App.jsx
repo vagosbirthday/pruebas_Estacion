@@ -6,8 +6,8 @@ import CategoryPage from './pages/CategoryPage'
 export default function App() {
   return (
     <div className="relative flex flex-col min-h-screen font-sans bg-fondo">
-      {/* Menú fijo izquierdo */}
-      <nav className="fixed top-0 left-0 h-full flex items-start p-4 pl-6">
+      {/* Menú fijo izquierdo: oculto en móvil, aparece en md+ */}
+      <nav className="hidden md:flex fixed top-0 left-0 h-full items-start p-4 pl-6">
         <Link
           to="/"
           className="text-rojoSuave hover:text-rojo font-bold text-2xl"
@@ -16,8 +16,16 @@ export default function App() {
         </Link>
       </nav>
 
-      {/* Contenedor principal: desplazado para dejar espacio al menú y a las franjas */}
-      <div className="flex-grow pl-20 pr-20 pt-4 pb-4">
+      {/* Contenedor principal: padding móvil y desplazamiento en md+ */}
+      <div
+        className="
+          flex-grow
+          pt-4 pb-4
+          px-4                /* móvil: padding horizontal */
+          md:pl-20 md:pr-20   /* md+: desplazamiento para menú y franjas */
+          md:px-0
+        "
+      >
         <main>
           <Routes>
             <Route path="/" element={<Home />} />

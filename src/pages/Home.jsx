@@ -6,9 +6,17 @@ import { motion } from 'framer-motion'
 
 export default function Home() {
   return (
-    <div className="space-y-16 px-4 sm:px-6 lg:px-8">
-      {/* Banner */}
-      <section className="relative h-64 bg-verde text-white flex items-center justify-center rounded-2xl shadow-playful">
+    <div className="space-y-16">
+      {/* Banner: más bajo en móvil, más alto en md+ */}
+      <section
+        className="
+          relative
+          h-48       /* móvil: 12rem */
+          md:h-64    /* md+: 16rem */
+          bg-verde text-white flex items-center justify-center
+          rounded-2xl shadow-playful
+        "
+      >
         <div className="absolute inset-0 bg-[url('/images/hero.jpg')] bg-cover bg-center opacity-40 rounded-2xl" />
         <div className="relative z-10 text-center px-4">
           <h1 className="text-4xl md:text-5xl font-bold">
@@ -42,7 +50,6 @@ export default function Home() {
 
       {/* Dónde nos ubicamos */}
       <Section title="Dónde nos ubicamos" accent="rojo">
-        {/* Contenedor responsive 16:9 */}
         <div
           className="w-full rounded-xl overflow-hidden shadow-playful mb-4"
           style={{ aspectRatio: '16/9' }}
