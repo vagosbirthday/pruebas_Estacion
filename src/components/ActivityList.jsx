@@ -17,7 +17,7 @@ export default function ActivityList() {
           ¿Qué hacemos en La Estación?
         </h2>
         <motion.div
-          variants={container}
+          variants={container}  
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
