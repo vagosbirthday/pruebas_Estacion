@@ -1,6 +1,6 @@
 // src/pages/Home.jsx
 import React from 'react'
-import CategoryList from '../components/CategoryList'
+import ActivityList from '../components/ActivityList'
 import Section from '../components/Section'
 import { motion } from 'framer-motion'
 
@@ -31,8 +31,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Categorías */}
-      <CategoryList />
+      {/* Actividades */}
+      <ActivityList />
 
       {/* Mensajes */}
       <Section id="mensajes" title="Mensajes" accent="naranja">

@@ -2,7 +2,8 @@
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import CategoryPage from './pages/CategoryPage'
-import Navbar from './components/Navbar'  // ← asegúrate de que este archivo exista
+import ActivityPage from './pages/ActivityPage'
+import Navbar from './components/Navbar'  
 
 export default function App() {
   return (
@@ -23,7 +24,7 @@ export default function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/categoria/:id" element={<CategoryPage />} />
+            <Route path="/actividad/:id" element={<ActivityPage />} />
           </Routes>
         </main>
       </div>
