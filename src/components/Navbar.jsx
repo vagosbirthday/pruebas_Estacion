@@ -2,7 +2,13 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { HiMenu, HiX } from 'react-icons/hi'
-import categories from '../data/categoriesData'
+
+const activities = [
+  { id: 'juegos', title: 'Juegos' },
+  { id: 'lectura', title: 'Lectura' },
+  { id: 'manualidades', title: 'Manualidades' },
+  { id: 'cultura', title: 'Cultura' }
+]
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -64,6 +70,7 @@ export default function Navbar() {
         <div className="p-6 space-y-6">
           <h2 className="text-2xl font-bold text-rojo">La Estación</h2>
 
+          {/* Secciones generales */}
           <ul className="space-y-2">
             <li>
               <Link
@@ -87,17 +94,18 @@ export default function Navbar() {
             ))}
           </ul>
 
+          {/* Actividades */}
           <div className="pt-4 border-t border-rojoClaro">
-            <h3 className="text-lg font-semibold text-rojo mb-2">Categorías</h3>
+            <h3 className="text-lg font-semibold text-rojo mb-2">Actividades</h3>
             <ul className="space-y-1">
-              {categories.map(cat => (
-                <li key={cat.id}>
+              {activities.map(act => (
+                <li key={act.id}>
                   <Link
-                    to={`/categoria/${cat.id}`}
+                    to={`/actividad/${act.id}`}
                     onClick={() => setOpen(false)}
                     className="block px-2 py-1 rounded hover:bg-rojoClaro transition"
                   >
-                    {cat.title}
+                    {act.title}
                   </Link>
                 </li>
               ))}

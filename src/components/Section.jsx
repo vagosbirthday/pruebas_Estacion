@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion'
 
-export default function Section({ title, children, accent = 'rojoSuave' }) {
+export default function Section({ id, title, children, accent = 'rojoSuave' }) {
   return (
     <motion.section
+      id={id}
       className={`w-full bg-white border-t-4 border-${accent} shadow-playful`}
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
