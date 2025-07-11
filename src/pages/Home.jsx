@@ -11,22 +11,23 @@ export default function Home() {
     <div className="space-y-16">
       {/* Banner simplificado */}
       <section
-        className="
-          py-8       /* móvil: espacio en lugar de h-48 */
-          md:h-64    /* md+: 16rem */
-          bg-verde text-white flex items-center justify-center
-          rounded-2xl shadow-playful
-        "
-      >
-        <div className="text-center px-4">
-          <h1 className="text-4xl md:text-5xl font-bold">
-            {banner.title}
-          </h1>
-          <p className="mt-2 text-lg">
-            {banner.subtitle}
-          </p>
-        </div>
-      </section>
+       className="
+         w-full
+         py-8                /* padding vertical para crecer con el contenido */
+         bg-verde text-white
+         flex items-center justify-center
+         rounded-2xl shadow-playful
+       "
+     >
+       <div className="max-w-xl text-center px-4">
+         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+           {banner.title}
+         </h1>
+         <p className="mt-4 text-base sm:text-lg">
+           {banner.subtitle}
+         </p>
+       </div>
+     </section>
 
 
       {/* Actividades */}
