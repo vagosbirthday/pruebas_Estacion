@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import CategoryPage from './pages/CategoryPage'
 import ActivityPage from './pages/ActivityPage'
+
 import Navbar from './components/Navbar'  
 
 export default function App() {

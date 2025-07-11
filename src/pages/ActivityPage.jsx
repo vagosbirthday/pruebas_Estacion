@@ -1,14 +1,17 @@
 // src/pages/ActivityPage.jsx
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import activities from '../data/activitiesData'
+import texts from '../data/texts'
+import images from '../data/images'
 import Section from '../components/Section'
 
 export default function ActivityPage() {
   const { id } = useParams()
-  const activity = activities.find(a => a.id === id)
+  const desc = texts.activities[id]
+  const img = images.activities[id]
+  const title = texts.activities[id]?.title || id
 
-  if (!activity) {
+  if (!desc || !img) {
     return (
       <Section title="Actividad no encontrada" accent="rojo">
         <p className="text-morado">
@@ -19,17 +22,15 @@ export default function ActivityPage() {
   }
 
   return (
-    <>
-      <Section title={activity.title} accent="verde">
-        <div className="max-w-3xl mx-auto text-morado space-y-4">
-          <img src={activity.imageUrl} alt={activity.title} className="w-full rounded-xl shadow-playful"/>
-          <p>
-            {/* Aquí tu texto descriptivo ampliado */}
-            {`Bienvenido a la actividad de ${activity.title}. Aquí podrás encontrar todos los detalles, imágenes y recursos para participar.`}
-          </p>
-          {/* Agrega más contenido: listas, fotos, horarios, etc. */}
-        </div>
-      </Section>
-    </>
+    <Section title={title} accent="verde">
+      <div className="max-w-3xl mx-auto text-morado space-y-6">
+        <img
+          src={img}
+          alt={title}
+          className="w-full rounded-xl shadow-playful object-cover"
+        />
+        <p className="whitespace-pre-line">{desc}</p>
+      </div>
+    </Section>
   )
 }
