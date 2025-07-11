@@ -12,7 +12,7 @@ export default function Home() {
       {/* Banner simplificado */}
       <section
         className="
-          h-48       /* móvil: 12rem */
+          py-8       /* móvil: espacio en lugar de h-48 */
           md:h-64    /* md+: 16rem */
           bg-verde text-white flex items-center justify-center
           rounded-2xl shadow-playful
@@ -27,6 +27,7 @@ export default function Home() {
           </p>
         </div>
       </section>
+
 
       {/* Actividades */}
       <ActivityList />
