@@ -7,11 +7,10 @@ import Section from '../components/Section'
 
 export default function ActivityPage() {
   const { id } = useParams()
-  const desc = texts.activities[id]
+  const data = texts.activities[id]
   const img = images.activities[id]
-  const title = texts.activities[id]?.title || id
 
-  if (!desc || !img) {
+  if (!data || !img) {
     return (
       <Section title="Actividad no encontrada" accent="rojo">
         <p className="text-morado">
@@ -22,14 +21,14 @@ export default function ActivityPage() {
   }
 
   return (
-    <Section title={title} accent="verde">
+    <Section title={data.title} accent="verde">
       <div className="max-w-3xl mx-auto text-morado space-y-6">
         <img
           src={img}
-          alt={title}
+          alt={data.title}
           className="w-full rounded-xl shadow-playful object-cover"
         />
-        <p className="whitespace-pre-line">{desc}</p>
+        <p className="whitespace-pre-line">{data.description}</p>
       </div>
     </Section>
   )
