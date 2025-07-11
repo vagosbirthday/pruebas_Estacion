@@ -56,15 +56,15 @@ const texts = {
     },
     lectura: {
       title: 'Lectura',
-      description: 'Sesiones de lectura acompañada y cuentacuentos.'
+      description: 'Ponemos a disposición un espacio de lectura para niñas y niños en situación de vulnerabilidad, que viven contextos adversos. Fomentamos el diálogo y aspiramos a despertar la sensibilidad y la imaginación a través de la literatura infantil.'
     },
     manualidades: {
       title: 'Manualidades',
-      description: 'Talleres creativos para que los niños expresen su arte.'
+      description: 'En los talleres de manualidades, se descubren su creatividad a través de proyectos prácticos: pintura, modelado, collage y reciclaje artístico. Fomentar la experimentación y la resolución de problemas, al tiempo que desarrollan habilidades manuales, coordinación y confianza en sí mismos.'
     },
     cultura: {
       title: 'Cultura',
-      description: 'Charlas y actividades sobre tradiciones y patrimonio.'
+      description: 'Nuestro objetivo es abrir puertas a la cultura para las infancias, brindando acceso a actividades, talleres y espacios donde puedan explorar tradiciones, expresiones artísticas y saberes comunitarios, enriqueciendo su mirada y fortaleciendo su identidad.'
     }
   }
 }
