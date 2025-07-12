@@ -85,3 +85,9 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+@layer utilities {
+  .swipe-hint {
+    @apply absolute bottom-4 left-1/2 transform -translate-x-1/2 text-3xl opacity-0 pointer-events-none text-white drop-shadow-lg animate-swipe-hint;
+  }
+}

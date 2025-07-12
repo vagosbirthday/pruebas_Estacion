@@ -47,6 +47,21 @@ const texts = {
     }
   },
 
+   gallery: {
+    juegos: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.',
+      'Excepteur sint occaecat cupidatat non proident, sunt in culpa.',
+      'Fusce dapibus tellus ac cursus commodo, tortor mauris condimentum nibh.',
+      'Etiam porta sem malesuada magna mollis euismod.',
+      'Aenean lacinia bibendum nulla sed consectetur.',
+      'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.',
+      'Cras justo odio, dapibus ac facilisis in, egestas eget quam.'
+    ]
+  },
+
   activities: {
     juegos: {
       title: 'Juegos',
