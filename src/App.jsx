@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import CategoryPage from './pages/CategoryPage'
 import ActivityPage from './pages/ActivityPage'
+import JuegosDemo from './pages/JuegosDemo'
 
 import Navbar from './components/Navbar'  
 
@@ -26,6 +27,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/actividad/:id" element={<ActivityPage />} />
+            <Route path="/juegos-demo" element={<JuegosDemo />} />
           </Routes>
         </main>
       </div>
