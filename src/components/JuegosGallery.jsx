@@ -28,7 +28,17 @@ export default function JuegosGallery() {
         {galleryImages.map((src, idx) => (
           <div key={idx} className="keen-slider__slide">
             {/* Forzamos un ratio 16:9 igual que la principal */}
-            <div className="w-full aspect-video overflow-hidden rounded-lg shadow-md bg-white">
+            <div
+                    className="
+                    w-full
+                    h-72          /* móvil: 18rem de alto */
+                    md:aspect-video /* md+: relación 16:9 automática */
+                    overflow-hidden
+                    rounded-lg
+                    shadow-md
+                    bg-white
+                    "
+                >
               <img
                 src={src}
                 alt={`Juegos ${idx + 1}`}
