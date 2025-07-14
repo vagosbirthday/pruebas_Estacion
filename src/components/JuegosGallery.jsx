@@ -23,11 +23,9 @@ export default function JuegosGallery() {
 
   return (
     <div className="relative max-w-4xl mx-auto py-8">
-      {/* Slider */}
       <div ref={sliderRef} className="keen-slider">
         {galleryImages.map((src, idx) => (
           <div key={idx} className="keen-slider__slide">
-            {/* Forzamos un ratio 16:9 igual que la principal */}
             <div
                     className="
                     w-full
