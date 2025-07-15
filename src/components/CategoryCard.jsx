@@ -28,11 +28,18 @@ export default function ActivityCard({ id, title, description, imageUrl }) {
         <Link
           to={`/actividad/${id}`}
           className="
-            block text-center bg-naranja text-white py-2 rounded-lg
-            font-medium hover:bg-verde transition
+            block                      /* siempre visible */
+            text-center
+            bg-morado                  /* color base del botón */
+            text-white
+            py-2
+            rounded-lg
+            font-medium
+            hover:bg-rojoSuave         /* color al pasar el cursor */
+            transition
           "
         >
-          Ver más
+          Ver más →
         </Link>
       </div>
     </motion.div>
