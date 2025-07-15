@@ -27,16 +27,16 @@ export default function JuegosGallery() {
         {galleryImages.map((src, idx) => (
           <div key={idx} className="keen-slider__slide">
             <div
-                    className="
-                    w-full
-                    h-72          /* móvil: 18rem de alto */
-                    md:aspect-video /* md+: relación 16:9 automática */
-                    overflow-hidden
-                    rounded-lg
-                    shadow-md
-                    bg-white
-                    "
-                >
+                className="
+                  w-full
+                  h-[27rem]        
+                  md:aspect-video    
+                  overflow-hidden
+                  rounded-lg
+                  shadow-md
+                  bg-white
+                "
+              >
               <img
                 src={src}
                 alt={`Juegos ${idx + 1}`}
