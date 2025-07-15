@@ -49,6 +49,30 @@ const texts = {
 
    gallery: {
     juegos: [
+      {
+        src: '/images/carusel1.jpg',
+        alt: 'Niños con fichas de colores',
+        caption:
+          'Clasificamos fichas por color y forma para reforzar motricidad fina y pensamiento lógico.'
+      },
+      {
+        src: '/images/carusel2.jpg',
+        alt: 'Juego colaborativo en el suelo',
+        caption:
+          'Bingo de imágenes en el suelo: reconocen visualmente elementos y trabajan en equipo.'
+      },
+      {
+        src: '/images/carusel3.jpg',
+        alt: 'Tarjetas didácticas',
+        caption:
+          'Exploramos tarjetas temáticas para ampliar vocabulario y memoria asociativa.'
+      },
+      {
+        src: '/images/carusel4.jpg',
+        alt: 'Rincón de lectura y juego libre',
+        caption:
+          'Rincón de lectura: fomentamos la imaginación y las habilidades sociales al compartir.'
+      },
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
