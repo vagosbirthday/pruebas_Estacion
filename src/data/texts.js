@@ -47,44 +47,70 @@ const texts = {
     }
   },
 
-   gallery: {
-    juegos: [
-      {
-        src: '/images/carusel1.jpg',
-        alt: 'Niños con fichas de colores',
-        caption:
-          'Clasificamos fichas por color y forma para reforzar motricidad fina y pensamiento lógico.'
+    gallery: {
+        juegos: [
+          {
+            src: '/images/carusel1.jpg',
+            alt: 'Niños con fichas de colores',
+            caption:
+              'Jugamos con fichas de colores para clasificar formas y desarrollar la motricidad fina.'
+          },
+          {
+            src: '/images/carusel2.jpg',
+            alt: 'Juego colaborativo en el suelo',
+            caption:
+              'Actividad colaborativa en el suelo: fomentamos el trabajo en equipo y la coordinación.'
+          },
+          {
+            src: '/images/carusel3.jpg',
+            alt: 'Tarjetas didácticas',
+            caption:
+              'Exploramos tarjetas didácticas para ampliar vocabulario y reforzar la memoria visual.'
+          },
+          {
+            src: '/images/carusel4.jpg',
+            alt: 'Rincón de lectura y juego libre',
+            caption:
+              'Rincón de lectura y juego libre: estimulamos la imaginación y las habilidades sociales.'
+          },
+          {
+            src: '/images/carusel5.jpg',
+            alt: 'Niños con un rompecabezas',
+            caption:
+              'Armamos rompecabezas para potenciar la resolución de problemas y la paciencia.'
+          },
+          {
+            src: '/images/carusel6.jpg',
+            alt: 'Niños y adulto con un memorama',
+            caption:
+              'Memorama en equipo: estimulamos la concentración y la memoria a través del juego.'
+          },
+          {
+            src: '/images/carusel7.jpg',
+            alt: 'Niños con manualidades',
+            caption:
+              'Taller de manualidades: desarrollamos la creatividad y la destreza con materiales variados.'
+          },
+          {
+            src: '/images/carusel8.jpg',
+            alt: 'Juego Compartido y variado',
+            caption:
+              'Espacio de juego compartido: fomentamos el respeto y la colaboración, donde cada quien puede disfrutar y aportar sus propias ideas.'
+          },
+          {
+            src: '/images/carusel9.jpg',
+            alt: 'Niños en Papalote, en la actividad de escalar llantas suspendidas',
+            caption:
+              'Aventura en Papalote: escalamos llantas suspendidas para fortalecer confianza y equilibrio.'
+          },
+          {
+            src: '/images/carusel10.jpg',
+            alt: 'Niños con la maestra activándose físicamente con juegos',
+            caption:
+              'Juegos físicos guiados: mejoramos la coordinación motriz y la energía junto a la maestra.'
+          }
+        ]
       },
-      {
-        src: '/images/carusel2.jpg',
-        alt: 'Juego colaborativo en el suelo',
-        caption:
-          'Bingo de imágenes en el suelo: reconocen visualmente elementos y trabajan en equipo.'
-      },
-      {
-        src: '/images/carusel3.jpg',
-        alt: 'Tarjetas didácticas',
-        caption:
-          'Exploramos tarjetas temáticas para ampliar vocabulario y memoria asociativa.'
-      },
-      {
-        src: '/images/carusel4.jpg',
-        alt: 'Rincón de lectura y juego libre',
-        caption:
-          'Rincón de lectura: fomentamos la imaginación y las habilidades sociales al compartir.'
-      },
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
-      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.',
-      'Excepteur sint occaecat cupidatat non proident, sunt in culpa.',
-      'Fusce dapibus tellus ac cursus commodo, tortor mauris condimentum nibh.',
-      'Etiam porta sem malesuada magna mollis euismod.',
-      'Aenean lacinia bibendum nulla sed consectetur.',
-      'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.',
-      'Cras justo odio, dapibus ac facilisis in, egestas eget quam.'
-    ]
-  },
 
   activities: {
     juegos: {
