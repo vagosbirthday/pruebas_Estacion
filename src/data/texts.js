@@ -108,7 +108,7 @@ const texts = {
             alt: 'Niños con la maestra activándose físicamente con juegos',
             caption:
               'Juegos físicos guiados: mejoramos la coordinación motriz y la energía junto a la maestra.'
-          }
+          } 
         ]
       },
 
