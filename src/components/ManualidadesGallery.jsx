@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import { useKeenSlider } from 'keen-slider/react'
+import { useKeenSlider }     from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
-import texts from '../data/texts'
-import images from '../data/images'
+import texts                  from '../data/texts'
+import images                 from '../data/images'
 
 export default function ManualidadesGallery() {
   const [current, setCurrent] = useState(0)
-  const [sliderRef, slider] = useKeenSlider({
+  const [sliderRef, slider]   = useKeenSlider({
     loop: true,
     slidesPerView: 1.1,
     spacing: 0,
@@ -19,10 +19,10 @@ export default function ManualidadesGallery() {
     }
   })
 
-  const items = texts.gallery.juegos.map((t, i) => ({
-    src: images.gallery.juegos[i],
-    alt: t.alt,
-    caption: t.caption
+  const items = images.gallery.manualidades.map((src, i) => ({
+    src,
+    alt: texts.gallery.juegos[i]?.alt || `Manualidad ${i + 1}`,
+    caption: texts.gallery.juegos[i]?.caption || ''
   }))
 
   return (
@@ -39,16 +39,8 @@ export default function ManualidadesGallery() {
 
       {slider && (
         <>
-          <button
-            onClick={() => slider.prev()}
-            className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/75 hover:bg-opacity-100 p-2 rounded-full shadow"
-            aria-label="Anterior"
-          >‹</button>
-          <button
-            onClick={() => slider.next()}
-            className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white/75 hover:bg-opacity-100 p-2 rounded-full shadow"
-            aria-label="Siguiente"
-          >›</button>
+          <button onClick={() => slider.prev()} className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/75 hover:bg-opacity-100 p-2 rounded-full shadow">‹</button>
+          <button onClick={() => slider.next()} className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white/75 hover:bg-opacity-100 p-2 rounded-full shadow">›</button>
         </>
       )}
 

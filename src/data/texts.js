@@ -121,7 +121,7 @@ const texts = {
     },
     lectura: {
       title: 'Lectura',
-      description: 'Ponemos a disposición un espacio de lectura para niñas y niños en situación de vulnerabilidad, que viven contextos adversos. Fomentamos el diálogo y aspiramos a despertar la sensibilidad y la imaginación a través de la literatura infantil.'
+      description: 'Ponemos a disposición un espacio de lectura para niñas y niños. Fomentamos el diálogo y aspiramos a despertar la sensibilidad y la imaginación a través de la literatura infantil.'
     },
     manualidades: {
       title: 'Manualidades',

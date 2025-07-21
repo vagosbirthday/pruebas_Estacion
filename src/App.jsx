@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import CategoryPage from './pages/CategoryPage'
 import ActivityPage from './pages/ActivityPage'
-import JuegosDemo from './pages/JuegosDemo'
 import Navbar from './components/Navbar'
 
 export default function App() {
@@ -15,8 +14,8 @@ export default function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/categoria/:id" element={<CategoryPage />} />
             <Route path="/actividad/:id" element={<ActivityPage />} />
-            <Route path="/juegos-demo" element={<JuegosDemo />} />
           </Routes>
         </main>
       </div>

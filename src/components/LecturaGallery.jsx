@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import { useKeenSlider } from 'keen-slider/react'
+import { useKeenSlider }     from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
-import texts from '../data/texts'
-import images from '../data/images'
+import texts                  from '../data/texts'
+import images                 from '../data/images'
 
 export default function LecturaGallery() {
   const [current, setCurrent] = useState(0)
-  const [sliderRef, slider] = useKeenSlider({
+  const [sliderRef, slider]   = useKeenSlider({
     loop: true,
     slidesPerView: 1.1,
     spacing: 0,
@@ -19,11 +19,11 @@ export default function LecturaGallery() {
     }
   })
 
-  // Por ahora reutiliza el array de juegos
-  const items = texts.gallery.juegos.map((t, i) => ({
-    src: images.gallery.juegos[i],
-    alt: t.alt,
-    caption: t.caption
+  // Usa captions de texts.gallery.juegos por ahora, o cambia a texts.gallery.lectura si los defines
+  const items = images.gallery.lectura.map((src, i) => ({
+    src,
+    alt: texts.gallery.juegos[i]?.alt || `Lectura ${i + 1}`,
+    caption: texts.gallery.juegos[i]?.caption || ''
   }))
 
   return (
@@ -40,20 +40,11 @@ export default function LecturaGallery() {
 
       {slider && (
         <>
-          <button
-            onClick={() => slider.prev()}
-            className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/75 hover:bg-opacity-100 p-2 rounded-full shadow"
-            aria-label="Anterior"
-          >‹</button>
-          <button
-            onClick={() => slider.next()}
-            className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white/75 hover:bg-opacity-100 p-2 rounded-full shadow"
-            aria-label="Siguiente"
-          >›</button>
+          <button onClick={() => slider.prev()} className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/75 hover:bg-opacity-100 p-2 rounded-full shadow">‹</button>
+          <button onClick={() => slider.next()} className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white/75 hover:bg-opacity-100 p-2 rounded-full shadow">›</button>
         </>
       )}
 
-      <div className="swipe-hint">🤏</div>
 
       <div className="mt-4 bg-fondo p-4 rounded-lg shadow-inner text-morado text-center text-lg max-w-2xl mx-auto">
         {items[current]?.caption}
