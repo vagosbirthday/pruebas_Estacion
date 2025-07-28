@@ -44,8 +44,6 @@ export default function CulturaGallery() {
         </>
       )}
 
-      <div className="swipe-hint">🤏</div>
-
       <div className="mt-4 bg-fondo p-4 rounded-lg shadow-inner text-morado text-center text-lg max-w-2xl mx-auto">
         {items[current]?.caption}
       </div>
